@@ -1,22 +1,16 @@
 package com.devdream.diverjoy.repositories;
 
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
+import android.util.Log;
 
 import com.devdream.diverjoy.consts.Consts;
+import com.devdream.diverjoy.db.DBHelper;
 
 public class DatabaseRepository {
 
-    public SQLiteDatabase getDatabase() {
-        SQLiteDatabase db;
-        try {
-            db = SQLiteDatabase.openDatabase(
-                    Consts.Database.NAME, null,
-                    SQLiteDatabase.OPEN_READONLY);
-            db.close();
-        } catch (SQLiteException e) {
-            return null;
-        }
-        return db;
+    public boolean isDatabaseCreated() {
+        Log.d(Consts.LogTag.DEBUG, "DatabaseRepository.isDatabaseCreated");
+        DBHelper dbHelper = new DBHelper();
+        dbHelper.getWritableDatabase();
+        return dbHelper.isCreated();
     }
 }

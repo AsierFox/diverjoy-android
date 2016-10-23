@@ -11,6 +11,6 @@ public class DatabaseService {
     }
 
     public boolean isDatabaseCreated() {
-        return repository.getDatabase() != null;
+        return repository.isDatabaseCreated();
     }
 }

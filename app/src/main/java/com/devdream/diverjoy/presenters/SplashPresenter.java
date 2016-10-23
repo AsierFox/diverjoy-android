@@ -1,5 +1,6 @@
 package com.devdream.diverjoy.presenters;
 
+import com.devdream.diverjoy.asynctasks.DatabaseCheckCreationTask;
 import com.devdream.diverjoy.activities.SplashActivity;
 import com.devdream.diverjoy.listeners.SplashListener;
 import com.devdream.diverjoy.managers.DatabaseManager;
@@ -17,8 +18,8 @@ public class SplashPresenter implements SplashListener {
     }
 
     private void checkDatabase() {
-        databaseManager.createDatabase();
-        databaseManager.seedDatabase();
+        DatabaseCheckCreationTask databaseCheckCreationTask = new DatabaseCheckCreationTask(this);
+        databaseCheckCreationTask.execute();
     }
 
     @Override

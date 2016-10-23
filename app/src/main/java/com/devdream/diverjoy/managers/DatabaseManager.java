@@ -14,9 +14,6 @@ public class DatabaseManager {
         return service.isDatabaseCreated();
     }
 
-    public void createDatabase() {
-    }
-
     public void seedDatabase() {
     }
 }
