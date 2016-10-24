@@ -3,22 +3,32 @@ package com.devdream.diverjoy.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import com.devdream.diverjoy.R;
 import com.devdream.diverjoy.context.AppContext;
 import com.devdream.diverjoy.listeners.SplashListener;
 import com.devdream.diverjoy.presenters.SplashPresenter;
+import com.squareup.picasso.Picasso;
 
 public class SplashActivity extends AppCompatActivity implements SplashListener {
 
     private SplashPresenter presenter;
 
+    private ImageView splashImageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splah);
+        setContentView(R.layout.activity_splash);
+
+        splashImageView = (ImageView) findViewById(R.id.splashImageView);
 
         presenter = new SplashPresenter(this);
+
+        Picasso.with(AppContext.getContext())
+                .load("file:///android_asset/images/init_splash.jpg")
+                .into(splashImageView);
     }
 
     @Override

@@ -6,6 +6,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.devdream.diverjoy.consts.Consts;
 import com.devdream.diverjoy.context.AppContext;
 
+import io.realm.Realm;
+import io.realm.RealmObject;
+
 public class DBHelper extends SQLiteOpenHelper {
 
     private boolean created;
@@ -26,5 +29,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public boolean isCreated() {
         return created;
+    }
+
+    public static int getNextIdPrimaryKey(Realm realm, Class<? extends RealmObject> realmObject) {
+        return realm.where(realmObject).max("id").intValue() + 1;
     }
 }
