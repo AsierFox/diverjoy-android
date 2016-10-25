@@ -2,23 +2,24 @@ package com.devdream.diverjoy.presenters;
 
 import com.devdream.diverjoy.asynctasks.DatabaseCheckCreationTask;
 import com.devdream.diverjoy.activities.SplashActivity;
+import com.devdream.diverjoy.context.AppContext;
 import com.devdream.diverjoy.listeners.SplashListener;
-import com.devdream.diverjoy.managers.DatabaseManager;
+
+import io.realm.Realm;
 
 public class SplashPresenter implements SplashListener {
 
     private SplashActivity activity;
-    private DatabaseManager databaseManager;
+
+    private DatabaseCheckCreationTask databaseCheckCreationTask;
 
     public SplashPresenter(SplashActivity newActivity) {
         activity = newActivity;
-        databaseManager = new DatabaseManager();
-
-        checkDatabase();
+        databaseCheckCreationTask = new DatabaseCheckCreationTask(this);
+        Realm.init(AppContext.getContext());
     }
 
-    private void checkDatabase() {
-        DatabaseCheckCreationTask databaseCheckCreationTask = new DatabaseCheckCreationTask(this);
+    public void checkDatabase() {
         databaseCheckCreationTask.execute();
     }
 

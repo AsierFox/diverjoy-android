@@ -30,8 +30,4 @@ public class DBHelper extends SQLiteOpenHelper {
     public boolean isCreated() {
         return created;
     }
-
-    public static int getNextIdPrimaryKey(Realm realm, Class<? extends RealmObject> realmObject) {
-        return realm.where(realmObject).max("id").intValue() + 1;
-    }
 }

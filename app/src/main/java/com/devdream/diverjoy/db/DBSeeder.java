@@ -16,46 +16,35 @@ import io.realm.exceptions.RealmPrimaryKeyConstraintException;
 
 public class DBSeeder {
 
-    private Realm realm;
-    private RealmConfiguration configuration;
-
-
-    public DBSeeder() {
-        Realm.init(AppContext.getContext());
-        configuration = new RealmConfiguration
-                .Builder()
-                .schemaVersion(Consts.Database.SCHEMA_VERSION)
-                .deleteRealmIfMigrationNeeded()
-                .build();
-        realm = Realm.getInstance(configuration);
-    }
-
     public void seed() {
-        realm.executeTransaction(new Realm.Transaction() {
-            @Override
-            public void execute(Realm realm) {
-                try {
-                    seedGames();
-                } catch (RealmPrimaryKeyConstraintException e) {
-                    Log.i(Consts.LogTag.INFO, "Already seeded the DDBB");
-                }
-            }
-        });
+        Realm realm = Realm.getInstance(RealmHelper.getRealmConfiguration());
+        realm.beginTransaction();
+        try {
+            seedGames(realm);
+        } catch (RealmPrimaryKeyConstraintException e) {
+            Log.e(Consts.LogTag.ERROR, "DDBB Already seeded");
+        } finally {
+            realm.commitTransaction();
+            realm.close();
+        }
     }
 
     // TODO Temporal solution, need to check better if DDBB is created
-    private void seedGames() throws RealmPrimaryKeyConstraintException {
+    private void seedGames(Realm realm) throws RealmPrimaryKeyConstraintException {
         Game game1 = realm.createObject(Game.class, 1);
         game1.setName("Tabu");
         game1.setDescription("Tabu is an awesome game where you need to");
+        game1.setCardColor("#2196F3");
 
         Game game2 = realm.createObject(Game.class, 2);
         game2.setName("Mímica");
         game2.setDescription("Intenta adivinar lo que tus amig@s NO pueden decir");
+        game2.setCardColor("#283593");
 
         Game game3 = realm.createObject(Game.class, 3);
         game3.setName("Yo nunca");
         game3.setDescription("¿Lo has hecho alguna vez?");
+        game3.setCardColor("#FF1744");
 
         Question q1 = realm.createObject(Question.class, 1);
         q1.setQuestion("¿La has chupado alguna vez?");

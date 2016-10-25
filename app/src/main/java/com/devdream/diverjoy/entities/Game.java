@@ -10,6 +10,7 @@ public class Game extends RealmObject {
     private int id;
     private String name;
     private String description;
+    private String cardColor;
     private RealmList<Topic> topics;
     private RealmList<Question> questions;
 
@@ -33,6 +34,14 @@ public class Game extends RealmObject {
     }
     public void setDescription(String newDescription) {
         description = newDescription;
+    }
+
+    public String getCardColor() {
+        return cardColor;
+    }
+
+    public void setCardColor(String newCardColor) {
+        cardColor = newCardColor;
     }
 
     public RealmList<Topic> getTopics() {

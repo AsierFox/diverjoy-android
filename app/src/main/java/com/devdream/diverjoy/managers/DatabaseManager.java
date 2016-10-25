@@ -6,9 +6,11 @@ import com.devdream.diverjoy.services.DatabaseService;
 public class DatabaseManager {
 
     private DatabaseService service;
+    private DBSeeder seeder;
 
     public DatabaseManager() {
         service = new DatabaseService();
+        seeder = new DBSeeder();
     }
 
     public boolean isDatabaseCreated() {
@@ -16,7 +18,6 @@ public class DatabaseManager {
     }
 
     public void seedDatabase() {
-        DBSeeder dbSeeder = new DBSeeder();
-        dbSeeder.seed();
+        seeder.seed();
     }
 }

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.devdream.diverjoy.R;
+import com.devdream.diverjoy.consts.Consts;
 import com.devdream.diverjoy.context.AppContext;
 import com.devdream.diverjoy.listeners.SplashListener;
 import com.devdream.diverjoy.presenters.SplashPresenter;
@@ -26,8 +27,10 @@ public class SplashActivity extends AppCompatActivity implements SplashListener 
 
         presenter = new SplashPresenter(this);
 
+        presenter.checkDatabase();
+
         Picasso.with(AppContext.getContext())
-                .load("file:///android_asset/images/init_splash.jpg")
+                .load(Consts.Assets.IMAGES + "init_splash.jpg")
                 .into(splashImageView);
     }
 

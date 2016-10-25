@@ -9,16 +9,16 @@ import com.devdream.diverjoy.managers.DatabaseManager;
 
 public class DatabaseCheckCreationTask extends AsyncTask<Void, Void, Void> {
 
-    private DatabaseManager databaseManager;
-    private SplashListener splashListener;
+    private DatabaseManager manager;
+    private SplashListener listener;
 
-    public DatabaseCheckCreationTask(SplashListener newSplashListener) {
-        splashListener = newSplashListener;
+    public DatabaseCheckCreationTask(SplashListener splashListener) {
+        listener = splashListener;
     }
 
     @Override
     protected void onPreExecute() {
-        databaseManager = new DatabaseManager();
+        manager = new DatabaseManager();
     }
 
     @Override
@@ -28,15 +28,15 @@ public class DatabaseCheckCreationTask extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPostExecute(Void pVoid) {
-        splashListener.goToMenu();
+        listener.goToMenu();
     }
 
     @Override
     protected Void doInBackground(Void... voids) {
         Log.d(Consts.LogTag.DEBUG, "DatabaseRepository.doInBackground");
-        if (!databaseManager.isDatabaseCreated()) {
+        if (!manager.isDatabaseCreated()) {
             Log.d(Consts.LogTag.DEBUG, "DatabaseRepository.doInBackground: seeding database");
-            databaseManager.seedDatabase();
+            manager.seedDatabase();
         }
         return null;
     }
