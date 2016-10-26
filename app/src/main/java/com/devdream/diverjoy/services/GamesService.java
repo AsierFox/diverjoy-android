@@ -1,16 +1,16 @@
 package com.devdream.diverjoy.services;
 
-import com.devdream.diverjoy.repositories.GameRepository;
+import com.devdream.diverjoy.repositories.GamesRepository;
 import com.devdream.diverjoy.vo.GameVO;
 
 import java.util.ArrayList;
 
-public class GameService {
+public class GamesService {
 
-    private GameRepository menuRepository;
+    private GamesRepository menuRepository;
 
-    public GameService() {
-        menuRepository = new GameRepository();
+    public GamesService() {
+        menuRepository = new GamesRepository();
     }
 
     public ArrayList<GameVO> getAllGames() {

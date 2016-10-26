@@ -1,29 +1,33 @@
 package com.devdream.diverjoy.consts;
 
-public final class Consts {
+public interface Consts {
 
-    public static final String APP_NAME = "DiverJoy";
+    String APP_NAME = "DiverJoy";
 
-    public final class Database {
-        public static final String NAME = "com_devdream_diverjoy";
-        public static final int SCHEMA_VERSION = 3;
+    interface Database {
+        String NAME = "com_devdream_diverjoy";
+        int SCHEMA_VERSION = 3;
     }
 
-    public final class Assets {
-        private static final String ASSETS_DIR = "file:///android_asset/";
+    interface Assets {
+        String ASSETS_DIR = "file:///android_asset/";
 
-        public static final String IMAGES = ASSETS_DIR + "images/";
+        String IMAGES = ASSETS_DIR + "images/";
     }
 
-    public final class LogTag {
-        public static final String DEBUG = "MEW";
-        public static final String INFO = APP_NAME + "MEW_INFO";
-        public static final String ERROR = APP_NAME + "MEW_ERROR";
+    interface LogTag {
+        String DEBUG = "MEW";
+        String INFO = APP_NAME + "MEW_INFO";
+        String ERROR = APP_NAME + "MEW_ERROR";
     }
 
-    public final class Games {
-        public static final String TABOO = "taboo";
-        public static final String MIME = "mime";
-        public static final String I_NEVER = "inever";
+    interface Games {
+        String TABOO = "taboo";
+        String MIME = "mime";
+        String I_NEVER = "inever";
+    }
+
+    interface Extras {
+        String CHOOSE_GAME_ID = "game_choose_id";
     }
 }

@@ -1,0 +1,9 @@
+ONGOING:
+- Choosing game
+- Game start screen, dynamic for all games
+
+THEN:
+- I Never Game
+
+TODO:
+- Test landscape an all activities (use onSaveInstanceState(Bundle) and onRestoreInstanceState(Bundle)) to save states

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.devdream.diverjoy.R;
+import com.devdream.diverjoy.listeners.ChoseGameOnClickListener;
 import com.devdream.diverjoy.vo.GameVO;
 
 import java.util.ArrayList;
@@ -31,9 +32,11 @@ public class GameListAdapter extends RecyclerView.Adapter<GameListAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        GameVO game = games.get(position);
+        final GameVO game = games.get(position);
+        ChoseGameOnClickListener choseGameOnClickListener = new ChoseGameOnClickListener(game);
         holder.textTextView.setBackgroundColor(Color.parseColor(game.getCardColor()));
         holder.textTextView.setText(game.getName());
+        holder.textTextView.setOnClickListener(choseGameOnClickListener);
     }
 
     @Override

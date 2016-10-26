@@ -1,16 +1,16 @@
 package com.devdream.diverjoy.managers;
 
-import com.devdream.diverjoy.services.GameService;
+import com.devdream.diverjoy.services.GamesService;
 import com.devdream.diverjoy.vo.GameVO;
 
 import java.util.ArrayList;
 
 public class MenuManager {
 
-    private GameService gameService;
+    private GamesService gameService;
 
     public MenuManager() {
-        gameService = new GameService();
+        gameService = new GamesService();
     }
 
     public ArrayList<GameVO> getAllGames() {

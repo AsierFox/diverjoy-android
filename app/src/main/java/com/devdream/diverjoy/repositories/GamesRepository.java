@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
-public class GameRepository {
+public class GamesRepository {
 
     public ArrayList<GameVO> getAllGames() {
         ArrayList<GameVO> res = new ArrayList<>();
