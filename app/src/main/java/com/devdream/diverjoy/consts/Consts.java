@@ -2,9 +2,11 @@ package com.devdream.diverjoy.consts;
 
 public final class Consts {
 
+    public static final String APP_NAME = "DiverJoy";
+
     public final class Database {
         public static final String NAME = "com_devdream_diverjoy";
-        public static final int SCHEMA_VERSION = 1;
+        public static final int SCHEMA_VERSION = 3;
     }
 
     public final class Assets {
@@ -15,7 +17,13 @@ public final class Consts {
 
     public final class LogTag {
         public static final String DEBUG = "MEW";
-        public static final String INFO = "MEW_INFO";
-        public static final String ERROR = "ERROR";
+        public static final String INFO = APP_NAME + "MEW_INFO";
+        public static final String ERROR = APP_NAME + "MEW_ERROR";
+    }
+
+    public final class Games {
+        public static final String TABOO = "taboo";
+        public static final String MIME = "mime";
+        public static final String I_NEVER = "inever";
     }
 }

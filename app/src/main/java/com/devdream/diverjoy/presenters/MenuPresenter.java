@@ -4,6 +4,7 @@ import com.devdream.diverjoy.activities.MenuActivity;
 import com.devdream.diverjoy.asynctasks.GetAllGamesTask;
 import com.devdream.diverjoy.entities.Game;
 import com.devdream.diverjoy.listeners.MenuListener;
+import com.devdream.diverjoy.vo.GameVO;
 
 import java.util.ArrayList;
 
@@ -29,7 +30,7 @@ public class MenuPresenter implements MenuListener {
     }
 
     @Override
-    public void gameListLoaded(ArrayList<Game> games) {
+    public void gameListLoaded(ArrayList<GameVO> games) {
         activity.gameListLoaded(games);
     }
 }

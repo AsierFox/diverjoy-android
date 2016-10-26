@@ -7,11 +7,21 @@ import java.util.ArrayList;
 
 public class GameVO {
 
+    private String id;
     private String name;
     private String description;
     private String cardColor;
     private ArrayList<Topic> topics;
     private ArrayList<Question> questions;
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String _id) {
+        id = _id;
+    }
 
     public String getName() {
         return name;

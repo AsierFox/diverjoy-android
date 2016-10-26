@@ -1,7 +1,6 @@
 package com.devdream.diverjoy.adapters;
 
 import android.graphics.Color;
-import android.graphics.ColorFilter;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,17 +8,17 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.devdream.diverjoy.R;
-import com.devdream.diverjoy.entities.Game;
+import com.devdream.diverjoy.vo.GameVO;
 
 import java.util.ArrayList;
 
 public class GameListAdapter extends RecyclerView.Adapter<GameListAdapter.ViewHolder> {
 
-    private ArrayList<Game> games;
+    private ArrayList<GameVO> games;
     private int listLength;
 
     // TODO Pass the ArrayList objects
-    public GameListAdapter(ArrayList<Game> _games) {
+    public GameListAdapter(ArrayList<GameVO> _games) {
         games = _games;
         listLength = games.size();
     }
@@ -32,7 +31,7 @@ public class GameListAdapter extends RecyclerView.Adapter<GameListAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Game game = games.get(position);
+        GameVO game = games.get(position);
         holder.textTextView.setBackgroundColor(Color.parseColor(game.getCardColor()));
         holder.textTextView.setText(game.getName());
     }
@@ -49,7 +48,7 @@ public class GameListAdapter extends RecyclerView.Adapter<GameListAdapter.ViewHo
         private ViewHolder(View itemView) {
             super(itemView);
 
-            textTextView = (TextView) itemView.findViewById(R.id.test_item);
+            textTextView = (TextView) itemView.findViewById(R.id.gameListItemTextView);
         }
     }
 }

@@ -2,9 +2,9 @@ package com.devdream.diverjoy.asynctasks;
 
 import android.os.AsyncTask;
 
-import com.devdream.diverjoy.entities.Game;
 import com.devdream.diverjoy.listeners.MenuListener;
 import com.devdream.diverjoy.managers.MenuManager;
+import com.devdream.diverjoy.vo.GameVO;
 
 import java.util.ArrayList;
 
@@ -14,7 +14,7 @@ public class GetAllGamesTask extends AsyncTask<Void, Void, Void> {
     private MenuListener listener;
     private MenuManager manager;
 
-    private ArrayList<Game> allGames;
+    private ArrayList<GameVO> allGames;
 
     public GetAllGamesTask(MenuListener menuListener) {
         listener = menuListener;

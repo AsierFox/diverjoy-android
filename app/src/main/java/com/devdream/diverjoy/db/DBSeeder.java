@@ -31,17 +31,17 @@ public class DBSeeder {
 
     // TODO Temporal solution, need to check better if DDBB is created
     private void seedGames(Realm realm) throws RealmPrimaryKeyConstraintException {
-        Game game1 = realm.createObject(Game.class, 1);
+        Game game1 = realm.createObject(Game.class, Consts.Games.TABOO);
         game1.setName("Tabu");
         game1.setDescription("Tabu is an awesome game where you need to");
         game1.setCardColor("#2196F3");
 
-        Game game2 = realm.createObject(Game.class, 2);
+        Game game2 = realm.createObject(Game.class, Consts.Games.MIME);
         game2.setName("Mímica");
         game2.setDescription("Intenta adivinar lo que tus amig@s NO pueden decir");
         game2.setCardColor("#283593");
 
-        Game game3 = realm.createObject(Game.class, 3);
+        Game game3 = realm.createObject(Game.class, Consts.Games.I_NEVER);
         game3.setName("Yo nunca");
         game3.setDescription("¿Lo has hecho alguna vez?");
         game3.setCardColor("#FF1744");

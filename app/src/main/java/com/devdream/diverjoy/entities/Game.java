@@ -7,7 +7,7 @@ import io.realm.annotations.PrimaryKey;
 public class Game extends RealmObject {
 
     @PrimaryKey
-    private int id;
+    private String id;
     private String name;
     private String description;
     private String cardColor;
@@ -15,10 +15,10 @@ public class Game extends RealmObject {
     private RealmList<Question> questions;
 
 
-    public int getId() {
+    public String getId() {
         return id;
     }
-    public void setId(int newId) {
+    public void setId(String newId) {
         id = newId;
     }
 

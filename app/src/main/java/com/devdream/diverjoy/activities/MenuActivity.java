@@ -8,9 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import com.devdream.diverjoy.R;
 import com.devdream.diverjoy.adapters.GameListAdapter;
 import com.devdream.diverjoy.context.AppContext;
-import com.devdream.diverjoy.entities.Game;
 import com.devdream.diverjoy.listeners.MenuListener;
 import com.devdream.diverjoy.presenters.MenuPresenter;
+import com.devdream.diverjoy.vo.GameVO;
 
 import java.util.ArrayList;
 
@@ -37,11 +37,11 @@ public class MenuActivity extends AppCompatActivity implements MenuListener {
     }
 
     @Override
-    public void gameListLoaded(ArrayList<Game> games) {
+    public void gameListLoaded(ArrayList<GameVO> games) {
         displayGamesRecyclerView(games);
     }
 
-    private void displayGamesRecyclerView(ArrayList<Game> games) {
+    private void displayGamesRecyclerView(ArrayList<GameVO> games) {
         allGamesRecyclerView.setHasFixedSize(true);
         allGamesRecyclerView.setLayoutManager(new LinearLayoutManager(AppContext.getContext()));
         allGamesRecyclerView.setAdapter(new GameListAdapter(games));
