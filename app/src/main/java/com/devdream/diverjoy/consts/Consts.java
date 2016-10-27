@@ -6,7 +6,7 @@ public interface Consts {
 
     interface Database {
         String NAME = "com_devdream_diverjoy";
-        int SCHEMA_VERSION = 3;
+        int SCHEMA_VERSION = 4;
     }
 
     interface Assets {

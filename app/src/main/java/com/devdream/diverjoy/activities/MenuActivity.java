@@ -25,11 +25,17 @@ public class MenuActivity extends AppCompatActivity implements MenuListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        allGamesRecyclerView = (RecyclerView) findViewById(R.id.allGamesRecyclerView);
+        allGamesRecyclerView = (RecyclerView) findViewById(R.id.menuAllGamesRecyclerView);
 
         presenter = new MenuPresenter(this);
 
         presenter.getAllGames();
+    }
+
+    private void displayGamesRecyclerView(ArrayList<GameVO> games) {
+        allGamesRecyclerView.setHasFixedSize(true);
+        allGamesRecyclerView.setLayoutManager(new LinearLayoutManager(AppContext.getContext()));
+        allGamesRecyclerView.setAdapter(new GameListAdapter(this, games));
     }
 
     @Override
@@ -41,9 +47,8 @@ public class MenuActivity extends AppCompatActivity implements MenuListener {
         displayGamesRecyclerView(games);
     }
 
-    private void displayGamesRecyclerView(ArrayList<GameVO> games) {
-        allGamesRecyclerView.setHasFixedSize(true);
-        allGamesRecyclerView.setLayoutManager(new LinearLayoutManager(AppContext.getContext()));
-        allGamesRecyclerView.setAdapter(new GameListAdapter(games));
+    @Override
+    public void choseGameOnClick(GameVO gameVO) {
+        presenter.choseGameOnClick(gameVO);
     }
 }

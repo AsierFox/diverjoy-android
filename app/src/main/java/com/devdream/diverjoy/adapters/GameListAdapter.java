@@ -9,17 +9,19 @@ import android.widget.TextView;
 
 import com.devdream.diverjoy.R;
 import com.devdream.diverjoy.listeners.ChoseGameOnClickListener;
+import com.devdream.diverjoy.listeners.MenuListener;
 import com.devdream.diverjoy.vo.GameVO;
 
 import java.util.ArrayList;
 
 public class GameListAdapter extends RecyclerView.Adapter<GameListAdapter.ViewHolder> {
 
+    private MenuListener menuListener;
     private ArrayList<GameVO> games;
     private int listLength;
 
-    // TODO Pass the ArrayList objects
-    public GameListAdapter(ArrayList<GameVO> _games) {
+    public GameListAdapter(MenuListener listener, ArrayList<GameVO> _games) {
+        menuListener = listener;
         games = _games;
         listLength = games.size();
     }
@@ -33,7 +35,8 @@ public class GameListAdapter extends RecyclerView.Adapter<GameListAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final GameVO game = games.get(position);
-        ChoseGameOnClickListener choseGameOnClickListener = new ChoseGameOnClickListener(game);
+        ChoseGameOnClickListener choseGameOnClickListener = new ChoseGameOnClickListener(menuListener, game);
+
         holder.textTextView.setBackgroundColor(Color.parseColor(game.getCardColor()));
         holder.textTextView.setText(game.getName());
         holder.textTextView.setOnClickListener(choseGameOnClickListener);
@@ -50,8 +53,7 @@ public class GameListAdapter extends RecyclerView.Adapter<GameListAdapter.ViewHo
 
         private ViewHolder(View itemView) {
             super(itemView);
-
-            textTextView = (TextView) itemView.findViewById(R.id.gameListItemTextView);
+            textTextView = (TextView) itemView.findViewById(R.id.gameListItemGameNameTextView);
         }
     }
 }

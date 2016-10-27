@@ -9,7 +9,7 @@
     card_view:cardElevation="22dp">
 
     <TextView
-        android:id="@+id/gameListItemTextView"
+        android:id="@+id/gameListItemGameNameTextView"
         android:textSize="50sp"
         android:padding="20dp"
         android:fontFamily="casual"

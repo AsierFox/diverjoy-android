@@ -7,17 +7,19 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="Welcome to Game ###"
+        android:id="@+id/gameStartGameNameTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="Description of game"
+        android:id="@+id/gameStartGameDescriptionTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
+        android:id="@+id/gameStartButton"
         android:text="Start"
+        android:onClick="startGameOnClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
