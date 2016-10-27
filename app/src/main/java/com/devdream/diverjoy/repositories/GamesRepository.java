@@ -1,8 +1,8 @@
 package com.devdream.diverjoy.repositories;
 
 import com.devdream.diverjoy.db.RealmHelper;
-import com.devdream.diverjoy.entities.Game;
-import com.devdream.diverjoy.vo.GameVO;
+import com.devdream.diverjoy.db.entities.Game;
+import com.devdream.diverjoy.db.vo.GameVO;
 
 import java.util.ArrayList;
 

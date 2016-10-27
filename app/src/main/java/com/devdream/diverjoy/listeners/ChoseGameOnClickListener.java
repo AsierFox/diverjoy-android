@@ -2,7 +2,7 @@ package com.devdream.diverjoy.listeners;
 
 import android.view.View;
 
-import com.devdream.diverjoy.vo.GameVO;
+import com.devdream.diverjoy.db.vo.GameVO;
 
 public class ChoseGameOnClickListener implements View.OnClickListener {
 

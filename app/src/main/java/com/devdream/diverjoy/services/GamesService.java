@@ -1,7 +1,7 @@
 package com.devdream.diverjoy.services;
 
 import com.devdream.diverjoy.repositories.GamesRepository;
-import com.devdream.diverjoy.vo.GameVO;
+import com.devdream.diverjoy.db.vo.GameVO;
 
 import java.util.ArrayList;
 

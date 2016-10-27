@@ -1,4 +1,4 @@
-package com.devdream.diverjoy.entities;
+package com.devdream.diverjoy.db.entities;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;

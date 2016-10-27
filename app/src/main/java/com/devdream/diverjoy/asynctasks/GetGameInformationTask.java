@@ -4,7 +4,7 @@ import android.os.AsyncTask;
 
 import com.devdream.diverjoy.listeners.GameStartListener;
 import com.devdream.diverjoy.managers.GameManager;
-import com.devdream.diverjoy.vo.GameVO;
+import com.devdream.diverjoy.db.vo.GameVO;
 
 public class GetGameInformationTask extends AsyncTask<Void, Void, Void> {
 

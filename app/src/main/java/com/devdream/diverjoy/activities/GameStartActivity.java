@@ -6,10 +6,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.devdream.diverjoy.R;
-import com.devdream.diverjoy.consts.Consts;
+import com.devdream.diverjoy.utils.Consts;
 import com.devdream.diverjoy.listeners.GameStartListener;
 import com.devdream.diverjoy.presenters.GameStartPresenter;
-import com.devdream.diverjoy.vo.GameVO;
+import com.devdream.diverjoy.db.vo.GameVO;
 
 public class GameStartActivity extends AppCompatActivity implements GameStartListener {
 

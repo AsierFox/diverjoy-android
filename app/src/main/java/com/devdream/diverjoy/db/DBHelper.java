@@ -3,11 +3,8 @@ package com.devdream.diverjoy.db;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.devdream.diverjoy.consts.Consts;
+import com.devdream.diverjoy.utils.Consts;
 import com.devdream.diverjoy.context.AppContext;
-
-import io.realm.Realm;
-import io.realm.RealmObject;
 
 public class DBHelper extends SQLiteOpenHelper {
 

@@ -1,4 +1,4 @@
-package com.devdream.diverjoy.vo;
+package com.devdream.diverjoy.db.vo;
 
 public class QuestionVO {
 

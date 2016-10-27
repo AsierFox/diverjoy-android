@@ -1,6 +1,6 @@
 package com.devdream.diverjoy.listeners;
 
-import com.devdream.diverjoy.vo.GameVO;
+import com.devdream.diverjoy.db.vo.GameVO;
 
 public interface GameStartListener {
     void loadGame(GameVO gameVO);

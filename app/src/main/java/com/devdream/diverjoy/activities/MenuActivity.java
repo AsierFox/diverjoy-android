@@ -10,7 +10,7 @@ import com.devdream.diverjoy.adapters.GameListAdapter;
 import com.devdream.diverjoy.context.AppContext;
 import com.devdream.diverjoy.listeners.MenuListener;
 import com.devdream.diverjoy.presenters.MenuPresenter;
-import com.devdream.diverjoy.vo.GameVO;
+import com.devdream.diverjoy.db.vo.GameVO;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,6 @@
 package com.devdream.diverjoy.db;
 
-import com.devdream.diverjoy.consts.Consts;
+import com.devdream.diverjoy.utils.Consts;
 
 import io.realm.RealmConfiguration;
 

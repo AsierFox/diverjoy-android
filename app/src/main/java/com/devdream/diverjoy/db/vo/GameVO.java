@@ -1,7 +1,7 @@
-package com.devdream.diverjoy.vo;
+package com.devdream.diverjoy.db.vo;
 
-import com.devdream.diverjoy.entities.Question;
-import com.devdream.diverjoy.entities.Topic;
+import com.devdream.diverjoy.db.entities.Question;
+import com.devdream.diverjoy.db.entities.Topic;
 
 import java.util.ArrayList;
 

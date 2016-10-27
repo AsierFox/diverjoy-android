@@ -5,10 +5,10 @@ import android.content.Intent;
 import com.devdream.diverjoy.activities.GameStartActivity;
 import com.devdream.diverjoy.activities.MenuActivity;
 import com.devdream.diverjoy.asynctasks.GetAllGamesTask;
-import com.devdream.diverjoy.consts.Consts;
+import com.devdream.diverjoy.utils.Consts;
 import com.devdream.diverjoy.context.AppContext;
 import com.devdream.diverjoy.listeners.MenuListener;
-import com.devdream.diverjoy.vo.GameVO;
+import com.devdream.diverjoy.db.vo.GameVO;
 
 import java.util.ArrayList;
 

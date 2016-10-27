@@ -1,7 +1,7 @@
 package com.devdream.diverjoy.managers;
 
 import com.devdream.diverjoy.services.GamesService;
-import com.devdream.diverjoy.vo.GameVO;
+import com.devdream.diverjoy.db.vo.GameVO;
 
 import java.util.ArrayList;
 

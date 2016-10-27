@@ -1,6 +1,6 @@
 package com.devdream.diverjoy.listeners;
 
-import com.devdream.diverjoy.vo.GameVO;
+import com.devdream.diverjoy.db.vo.GameVO;
 
 import java.util.ArrayList;
 

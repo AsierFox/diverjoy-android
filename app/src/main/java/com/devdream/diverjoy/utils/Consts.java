@@ -1,4 +1,4 @@
-package com.devdream.diverjoy.consts;
+package com.devdream.diverjoy.utils;
 
 public interface Consts {
 
@@ -22,9 +22,9 @@ public interface Consts {
     }
 
     interface Games {
-        String TABOO = "taboo";
-        String MIME = "mime";
-        String I_NEVER = "inever";
+        String TABOO_ID = "taboo";
+        String MIME_ID = "mime";
+        String I_NEVER_ID = "inever";
     }
 
     interface Extras {

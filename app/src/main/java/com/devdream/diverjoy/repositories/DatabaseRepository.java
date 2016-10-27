@@ -2,7 +2,7 @@ package com.devdream.diverjoy.repositories;
 
 import android.util.Log;
 
-import com.devdream.diverjoy.consts.Consts;
+import com.devdream.diverjoy.utils.Consts;
 import com.devdream.diverjoy.db.DBHelper;
 
 public class DatabaseRepository {

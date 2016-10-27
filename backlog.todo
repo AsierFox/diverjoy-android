@@ -7,3 +7,6 @@ THEN:
 
 TODO:
 - Test landscape an all activities (use onSaveInstanceState(Bundle) and onRestoreInstanceState(Bundle)) to save states
+
+Choose question:
+- Why not pull all your ids first into a HashMap, choose a random index, look it up, then delete that index from the session array?

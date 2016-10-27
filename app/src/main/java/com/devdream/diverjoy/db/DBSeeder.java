@@ -2,15 +2,13 @@ package com.devdream.diverjoy.db;
 
 import android.util.Log;
 
-import com.devdream.diverjoy.consts.Consts;
-import com.devdream.diverjoy.context.AppContext;
-import com.devdream.diverjoy.entities.Game;
-import com.devdream.diverjoy.entities.Question;
-import com.devdream.diverjoy.entities.Topic;
-import com.devdream.diverjoy.entities.Word;
+import com.devdream.diverjoy.utils.Consts;
+import com.devdream.diverjoy.db.entities.Game;
+import com.devdream.diverjoy.db.entities.Question;
+import com.devdream.diverjoy.db.entities.Topic;
+import com.devdream.diverjoy.db.entities.Word;
 
 import io.realm.Realm;
-import io.realm.RealmConfiguration;
 import io.realm.RealmList;
 import io.realm.exceptions.RealmPrimaryKeyConstraintException;
 
@@ -29,19 +27,18 @@ public class DBSeeder {
         }
     }
 
-    // TODO Temporal solution, need to check better if DDBB is created
     private void seedGames(Realm realm) throws RealmPrimaryKeyConstraintException {
-        Game game1 = realm.createObject(Game.class, Consts.Games.TABOO);
+        Game game1 = realm.createObject(Game.class, Consts.Games.TABOO_ID);
         game1.setName("Tabu");
         game1.setDescription("Tabu is an awesome game where you need to");
         game1.setCardColor("#2196F3");
 
-        Game game2 = realm.createObject(Game.class, Consts.Games.MIME);
+        Game game2 = realm.createObject(Game.class, Consts.Games.MIME_ID);
         game2.setName("Mímica");
         game2.setDescription("Intenta adivinar lo que tus amig@s NO pueden decir");
         game2.setCardColor("#283593");
 
-        Game game3 = realm.createObject(Game.class, Consts.Games.I_NEVER);
+        Game game3 = realm.createObject(Game.class, Consts.Games.I_NEVER_ID);
         game3.setName("Yo nunca");
         game3.setDescription("¿Lo has hecho alguna vez?");
         game3.setCardColor("#FF1744");
@@ -55,10 +52,30 @@ public class DBSeeder {
         Question q3 = realm.createObject(Question.class, 3);
         q3.setQuestion("¿Con alguien de los que estas le consideras feo?");
 
+        Question q4 = realm.createObject(Question.class, 4);
+        q3.setQuestion("Yo nunca he conducido una moto sin carnet");
+
+        Question q5 = realm.createObject(Question.class, 5);
+        q3.setQuestion("Yo nunca he querido recibir al pizzero en ropa interior");
+
+        Question q6 = realm.createObject(Question.class, 6);
+        q3.setQuestion("Yo nunca me he desnudade frente a una webcam");
+
+        Question q7 = realm.createObject(Question.class, 7);
+        q3.setQuestion("Yo nunca le he pedido entrar a una chica primero para verla el culo");
+
+        Question q8 = realm.createObject(Question.class, 8);
+        q3.setQuestion("Yo nunca he visto porno en el móvil");
+
         RealmList<Question> questions = new RealmList<>();
         questions.add(q1);
         questions.add(q2);
         questions.add(q3);
+        questions.add(q4);
+        questions.add(q5);
+        questions.add(q6);
+        questions.add(q7);
+        questions.add(q8);
         game3.setQuestions(questions);
 
         Topic t1 = realm.createObject(Topic.class, 1);

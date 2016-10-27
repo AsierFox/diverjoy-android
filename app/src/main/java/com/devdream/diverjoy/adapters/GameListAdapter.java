@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.devdream.diverjoy.R;
 import com.devdream.diverjoy.listeners.ChoseGameOnClickListener;
 import com.devdream.diverjoy.listeners.MenuListener;
-import com.devdream.diverjoy.vo.GameVO;
+import com.devdream.diverjoy.db.vo.GameVO;
 
 import java.util.ArrayList;
 

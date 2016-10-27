@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.devdream.diverjoy.R;
-import com.devdream.diverjoy.consts.Consts;
+import com.devdream.diverjoy.utils.Consts;
 import com.devdream.diverjoy.context.AppContext;
 import com.devdream.diverjoy.listeners.SplashListener;
 import com.devdream.diverjoy.presenters.SplashPresenter;

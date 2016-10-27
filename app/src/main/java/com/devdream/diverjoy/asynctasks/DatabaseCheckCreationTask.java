@@ -3,7 +3,7 @@ package com.devdream.diverjoy.asynctasks;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.devdream.diverjoy.consts.Consts;
+import com.devdream.diverjoy.utils.Consts;
 import com.devdream.diverjoy.listeners.SplashListener;
 import com.devdream.diverjoy.managers.DatabaseManager;
 

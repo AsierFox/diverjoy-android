@@ -1,7 +1,7 @@
 package com.devdream.diverjoy.managers;
 
 import com.devdream.diverjoy.repositories.GamesRepository;
-import com.devdream.diverjoy.vo.GameVO;
+import com.devdream.diverjoy.db.vo.GameVO;
 
 public class GameManager {
 
