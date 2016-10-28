@@ -1,11 +1,13 @@
 package com.devdream.diverjoy.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
 import com.devdream.diverjoy.R;
+import com.devdream.diverjoy.context.AppContext;
 import com.devdream.diverjoy.utils.Consts;
 import com.devdream.diverjoy.listeners.GameStartListener;
 import com.devdream.diverjoy.presenters.GameStartPresenter;
@@ -45,6 +47,7 @@ public class GameStartActivity extends AppCompatActivity implements GameStartLis
 
     @Override
     public void startGame() {
-        presenter.startGame();
+        Intent startGameIntent = new Intent(AppContext.getContext(), presenter.getSelectedGameActivity());
+        startActivity(startGameIntent);
     }
 }

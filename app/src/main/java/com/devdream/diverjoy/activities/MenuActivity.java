@@ -1,5 +1,6 @@
 package com.devdream.diverjoy.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,6 +12,7 @@ import com.devdream.diverjoy.context.AppContext;
 import com.devdream.diverjoy.listeners.MenuListener;
 import com.devdream.diverjoy.presenters.MenuPresenter;
 import com.devdream.diverjoy.db.vo.GameVO;
+import com.devdream.diverjoy.utils.Consts;
 
 import java.util.ArrayList;
 
@@ -49,6 +51,8 @@ public class MenuActivity extends AppCompatActivity implements MenuListener {
 
     @Override
     public void choseGameOnClick(GameVO gameVO) {
-        presenter.choseGameOnClick(gameVO);
+        Intent chooseGameIntent = new Intent(AppContext.getContext(), GameStartActivity.class);
+        chooseGameIntent.putExtra(Consts.Extras.CHOOSE_GAME_ID, gameVO.getId());
+        startActivity(chooseGameIntent);
     }
 }

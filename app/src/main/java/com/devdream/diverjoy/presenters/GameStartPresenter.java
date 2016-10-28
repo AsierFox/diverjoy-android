@@ -38,11 +38,10 @@ public class GameStartPresenter implements GameStartListener {
 
     @Override
     public void startGame() {
-        Intent startGameIntent = new Intent(AppContext.getContext(), getSelectedGameActivity());
-        activity.startActivity(startGameIntent);
+        activity.startGame();
     }
 
-    private Class<? extends AppCompatActivity> getSelectedGameActivity() {
+    public Class<? extends AppCompatActivity> getSelectedGameActivity() {
         switch (selectedGameVO.getId()) {
             case Consts.Games.I_NEVER_ID:
                 return INeverPlayActivity.class;

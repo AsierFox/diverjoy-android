@@ -1,12 +1,7 @@
 package com.devdream.diverjoy.presenters;
 
-import android.content.Intent;
-
-import com.devdream.diverjoy.activities.GameStartActivity;
 import com.devdream.diverjoy.activities.MenuActivity;
 import com.devdream.diverjoy.asynctasks.GetAllGamesTask;
-import com.devdream.diverjoy.utils.Consts;
-import com.devdream.diverjoy.context.AppContext;
 import com.devdream.diverjoy.listeners.MenuListener;
 import com.devdream.diverjoy.db.vo.GameVO;
 
@@ -40,8 +35,6 @@ public class MenuPresenter implements MenuListener {
 
     @Override
     public void choseGameOnClick(GameVO gameVO) {
-        Intent chooseGameIntent = new Intent(AppContext.getContext(), GameStartActivity.class);
-        chooseGameIntent.putExtra(Consts.Extras.CHOOSE_GAME_ID, gameVO.getId());
-        AppContext.getContext().startActivity(chooseGameIntent);
+        activity.choseGameOnClick(gameVO);
     }
 }
