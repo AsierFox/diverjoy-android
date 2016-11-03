@@ -8,10 +8,10 @@ import android.widget.TextView;
 
 import com.devdream.diverjoy.R;
 import com.devdream.diverjoy.context.AppContext;
-import com.devdream.diverjoy.utils.Consts;
+import com.devdream.diverjoy.db.vo.GameVO;
 import com.devdream.diverjoy.listeners.GameStartListener;
 import com.devdream.diverjoy.presenters.GameStartPresenter;
-import com.devdream.diverjoy.db.vo.GameVO;
+import com.devdream.diverjoy.utils.Consts;
 
 public class GameStartActivity extends AppCompatActivity implements GameStartListener {
 
@@ -25,10 +25,10 @@ public class GameStartActivity extends AppCompatActivity implements GameStartLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_start);
 
-        String gameId = getIntent().getStringExtra(Consts.Extras.CHOOSE_GAME_ID);
-
         gameNameTextView = (TextView) findViewById(R.id.gameStartGameNameTextView);
         gameDescriptionTextView = (TextView) findViewById(R.id.gameStartGameDescriptionTextView);
+
+        String gameId = getIntent().getStringExtra(Consts.Extras.CHOOSE_GAME_ID);
 
         presenter = new GameStartPresenter(this, gameId);
 

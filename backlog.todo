@@ -1,12 +1,11 @@
 ONGOING:
-- Choosing game
-- Game start screen, dynamic for all games
-
-THEN:
 - I Never Game
-
-TODO:
-- Test landscape an all activities (use onSaveInstanceState(Bundle) and onRestoreInstanceState(Bundle)) to save states
 
 Choose question:
 - Why not pull all your ids first into a HashMap, choose a random index, look it up, then delete that index from the session array?
+
+BUGS:
+- Test landscape an all activities (use onSaveInstanceState(Bundle) and onRestoreInstanceState(Bundle)) to save states
+
+Managers & AsyncTask:
+- Los managers llaman a los AsyncTasks (Refactorizar)

@@ -22,11 +22,6 @@ public class DatabaseCheckCreationTask extends AsyncTask<Void, Void, Void> {
     }
 
     @Override
-    protected void onProgressUpdate(Void... values) {
-        Log.d("MEW", "update");
-    }
-
-    @Override
     protected void onPostExecute(Void pVoid) {
         listener.goToMenu();
     }

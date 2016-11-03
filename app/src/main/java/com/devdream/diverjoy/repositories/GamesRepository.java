@@ -31,6 +31,7 @@ public class GamesRepository {
         ArrayList<GameVO> res = new ArrayList<>();
         Realm realm = Realm.getInstance(RealmHelper.getRealmConfiguration());
         Game game = realm.where(Game.class).equalTo("id", gameId).findFirst();
+
         GameVO gameVO = new GameVO();
         gameVO.setId(game.getId());
         gameVO.setName(game.getName());
