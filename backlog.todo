@@ -1,11 +1,10 @@
 ONGOING:
 - I Never Game
 
-Choose question:
-- Why not pull all your ids first into a HashMap, choose a random index, look it up, then delete that index from the session array?
-
 BUGS:
 - Test landscape an all activities (use onSaveInstanceState(Bundle) and onRestoreInstanceState(Bundle)) to save states
 
-Managers & AsyncTask:
-- Los managers llaman a los AsyncTasks (Refactorizar)
+Software architecture:
+- Managers will call the AsyncTasks, and managers will have the instance of the necesary repositores, passing them to asynctaks (Refactorizar)
+- The presenter is goind to call to the managers, and managers can separate more, and group to a service.
+- Manager Layer is a part of Service Layer in small applications, so the Service will wrap the different managers
