@@ -1,7 +1,7 @@
-package com.devdream.diverjoy.managers;
+package com.devdream.diverjoy.business.managers;
 
+import com.devdream.diverjoy.business.services.DatabaseService;
 import com.devdream.diverjoy.db.DBSeeder;
-import com.devdream.diverjoy.services.DatabaseService;
 
 public class DatabaseManager {
 

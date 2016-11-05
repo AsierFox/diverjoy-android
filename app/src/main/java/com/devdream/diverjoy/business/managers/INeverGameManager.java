@@ -1,4 +1,4 @@
-package com.devdream.diverjoy.managers;
+package com.devdream.diverjoy.business.managers;
 
 import com.devdream.diverjoy.asynctasks.GetAllQuestionsTask;
 import com.devdream.diverjoy.db.vo.QuestionVO;

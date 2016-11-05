@@ -3,7 +3,7 @@ package com.devdream.diverjoy.asynctasks;
 import android.os.AsyncTask;
 
 import com.devdream.diverjoy.listeners.MenuListener;
-import com.devdream.diverjoy.managers.MenuManager;
+import com.devdream.diverjoy.business.managers.MenuManager;
 import com.devdream.diverjoy.db.vo.GameVO;
 
 import java.util.ArrayList;

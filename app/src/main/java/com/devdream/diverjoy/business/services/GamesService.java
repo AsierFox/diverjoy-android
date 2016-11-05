@@ -1,4 +1,4 @@
-package com.devdream.diverjoy.services;
+package com.devdream.diverjoy.business.services;
 
 import com.devdream.diverjoy.repositories.GamesRepository;
 import com.devdream.diverjoy.db.vo.GameVO;

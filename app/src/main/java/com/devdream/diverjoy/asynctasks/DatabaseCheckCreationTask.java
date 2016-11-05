@@ -5,7 +5,7 @@ import android.util.Log;
 
 import com.devdream.diverjoy.utils.Consts;
 import com.devdream.diverjoy.listeners.SplashListener;
-import com.devdream.diverjoy.managers.DatabaseManager;
+import com.devdream.diverjoy.business.managers.DatabaseManager;
 
 public class DatabaseCheckCreationTask extends AsyncTask<Void, Void, Void> {
 

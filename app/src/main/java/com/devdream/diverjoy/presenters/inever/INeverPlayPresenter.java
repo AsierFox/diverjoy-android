@@ -3,7 +3,7 @@ package com.devdream.diverjoy.presenters.inever;
 import com.devdream.diverjoy.activities.inever.INeverPlayActivity;
 import com.devdream.diverjoy.db.vo.QuestionVO;
 import com.devdream.diverjoy.listeners.INeverGameListener;
-import com.devdream.diverjoy.managers.INeverGameManager;
+import com.devdream.diverjoy.business.managers.INeverGameManager;
 
 import java.util.ArrayList;
 
@@ -19,7 +19,7 @@ public class INeverPlayPresenter implements INeverGameListener {
         manager = new INeverGameManager(this);
     }
 
-    // TODO Make buton disabled till the questions are loaded
+    // TODO Make button disabled till the questions are loaded
     public void getNextQuestion() {
         loadQuestion(manager.getNextQuestion(questionVOs));
     }
