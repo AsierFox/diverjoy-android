@@ -11,16 +11,13 @@ public class SplashPresenter implements SplashListener {
 
     private SplashActivity activity;
 
-    private DatabaseCheckCreationTask databaseCheckCreationTask;
-
     public SplashPresenter(SplashActivity newActivity) {
         activity = newActivity;
-        databaseCheckCreationTask = new DatabaseCheckCreationTask(this);
         Realm.init(AppContext.getContext());
     }
 
     public void checkDatabase() {
-        databaseCheckCreationTask.execute();
+        new DatabaseCheckCreationTask(this).execute();
     }
 
     @Override

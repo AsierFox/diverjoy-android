@@ -2,6 +2,7 @@ package com.devdream.diverjoy.presenters;
 
 import com.devdream.diverjoy.activities.MenuActivity;
 import com.devdream.diverjoy.asynctasks.GetAllGamesTask;
+import com.devdream.diverjoy.business.managers.GameManager;
 import com.devdream.diverjoy.listeners.MenuListener;
 import com.devdream.diverjoy.db.vo.GameVO;
 
@@ -11,16 +12,16 @@ public class MenuPresenter implements MenuListener {
 
     private MenuActivity activity;
 
-    private GetAllGamesTask getAllGamesTask;
+    private GameManager manager;
 
     public MenuPresenter(MenuActivity newActivity) {
         activity = newActivity;
 
-        getAllGamesTask = new GetAllGamesTask(this);
+        manager = new GameManager(this);
     }
 
     public void getAllGames() {
-        getAllGamesTask.execute();
+        manager.getAllGames();
     }
 
     @Override
