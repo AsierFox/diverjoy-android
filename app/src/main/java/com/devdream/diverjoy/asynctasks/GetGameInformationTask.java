@@ -21,7 +21,7 @@ public class GetGameInformationTask extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPreExecute() {
-        manager = new GameManager();
+        manager = new GameManager(this);
     }
 
     @Override
